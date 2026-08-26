@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="styles/style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Thi is DOM header.</h1>
+    </header>
+    <main>
+       <section>
+         <h1>Welcome to my DOM</h1>
+         <p>This is a dummy paragraph for DOM. You can add anything here.</p>
+       <ul>
+            <li>Shofiq</li>
+            <li class="foreign">Rofiq</li>
+            <li id="band">Kalam</li>
+            <li>Panu</li>
+       </ul>
+       </section>
+       <section>
+        <h1 id="food-title">Foods I love</h1>
+        <ul>
+            <li>Rice</li>
+            <li>Potato</li>
+            <li>Lenthils</li>
+            <li class="foreign">Pasta</li>
+            <li class="foreign">Nasta</li>
+            <li class="foreign">Borhani</li>
+            <li>Lassi</li>
+        </ul>
+       </section>
+       <section>
+        <h1>List of Vegetables I like</h1>
+        <ul>
+            <li id="spina">Spinach</li>
+            <li class="veg">Carrot</li>
+            <li class="veg">Tomato</li>
+            <li class="veg">Cucumber</li>
+            <li>Radish</li>
+        </ul>
+       </section>
+    </main>
+    <script>
+        const student = {
+            name: 'Aminul',
+            id: 121,
+            study: function(subject){
+                // console.log('studying subject: ', subject)
+                }
+            }
+
+            // document.getElementsByTagName
+            const liCollection = document.getElementsByTagName('li');
+            // console.log(liCollection)
+
+            for(const li of liCollection){
+                // console.log(li.innerText)
+            }
+            // all h1 tags
+            const allHeadings = document.getElementsByTagName('h1');
+            for (const heading of allHeadings){
+                // console.log(heading.innerText)
+            }
+            //  p tags
+            const paraGraph = document.getElementsByTagName('p');
+            for (const para of paraGraph){
+                // console.log(para.innerText)
+            }
+            // get by Id
+            const foodTitle1 = document.getElementById('food-title')
+            console.log(foodTitle1.innerText)
+            foodTitle1.innerText = ' Food we love to eat'
+
+            const bandElement = document.getElementById ('band');
+            bandElement.innerText  = 'Murad takla'
+
+            // get elements by class name
+
+            const foreignElements = document.getElementsByClassName('foreign');
+            // console.log(foreignElements)
+
+            for(const ele of foreignElements){
+                // console.log(ele.innerText)
+            }
+
+            // vegetables items get by id and class
+            const vegItems = document.getElementsByClassName('veg')
+                for(const vege of vegItems){
+                    console.log(vege.innerText)
+                }
+
+            const spinachItem = document.getElementById('spina')
+                console.log(spinachItem.innerText = 'Palonshak')
+    </script>
+    <script src="js/hello.js"></script>
+</body>
+</html>
