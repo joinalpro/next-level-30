@@ -12,9 +12,10 @@
         <h1>Thi is DOM header.</h1>
     </header>
     <main>
-       <section>
+       <section id="puran-dhaka", class="songs">
          <h1>Welcome to my DOM</h1>
-         <p>This is a dummy paragraph for DOM. You can add anything here.</p>
+         <p>This is a <span>dummy paragraph</span> for DOM. You <span>can add</span> anything here.</p>
+         <h1>dummy header <span>dummy span text</span></h1>
        <ul>
             <li>Shofiq</li>
             <li class="foreign">Rofiq</li>
@@ -23,16 +24,16 @@
        </ul>
        </section>
        <section>
-        <h1 id="food-title">Foods I love</h1>
-        <ul>
-            <li>Rice</li>
-            <li>Potato</li>
-            <li>Lenthils</li>
-            <li class="foreign">Pasta</li>
-            <li class="foreign">Nasta</li>
-            <li class="foreign">Borhani</li>
-            <li>Lassi</li>
-        </ul>
+            <h1 id="food-title">Foods I love</h1>
+            <ul class="food">
+                <li>Rice</li>
+                <li>Potato</li>
+                <li>Lenthils</li>
+                <li class="foreign">Pasta</li>
+                <li class="foreign">Nasta</li>
+                <li class="foreign">Borhani</li>
+                <li>Lassi</li>
+            </ul>
        </section>
        <section>
         <h1>List of Vegetables I like</h1>
@@ -73,8 +74,8 @@
             }
             // get by Id
             const foodTitle1 = document.getElementById('food-title')
-            console.log(foodTitle1.innerText)
-            foodTitle1.innerText = ' Food we love to eat'
+            // console.log(foodTitle1.innerText)
+            foodTitle1.innerText = ' Foods I love to eat'
 
             const bandElement = document.getElementById ('band');
             bandElement.innerText  = 'Murad takla'
@@ -91,12 +92,23 @@
             // vegetables items get by id and class
             const vegItems = document.getElementsByClassName('veg')
                 for(const vege of vegItems){
-                    console.log(vege.innerText)
+                    // console.log(vege.innerText)
                 }
 
             const spinachItem = document.getElementById('spina')
-                console.log(spinachItem.innerText = 'Palonshak')
+                // console.log(spinachItem.innerText = 'Palonshak')
+
+
+        // query selector all - will give you a Node list
+            const spanElements = document.querySelectorAll('#puran-dhaka p span');
+            for (const span of spanElements){
+                // console.log(span.innerText)
+            }
+            
+
     </script>
+
+
     <script src="js/hello.js"></script>
 </body>
 </html>
