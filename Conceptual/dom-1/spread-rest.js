@@ -80,4 +80,4 @@ const updateUser3 = {
     skills: [...user3.skills, "Next.js"]
 }
 
-console.log(updateUser3.skills)
+// console.log(updateUser3.skills)
